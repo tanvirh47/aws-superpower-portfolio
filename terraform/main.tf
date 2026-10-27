@@ -105,15 +105,11 @@ resource "aws_lambda_permission" "url_public" {
   function_url_auth_type = "NONE"
 }
 
-# Newer AWS requirement: also allow InvokeFunction via the function URL.
-# Needs a recent aws provider 5.x. If your version rejects the argument, run `terraform init -upgrade`.
-resource "aws_lambda_permission" "url_public_invoke" {
-  statement_id             = "AllowPublicInvokeViaUrl"
-  action                   = "lambda:InvokeFunction"
-  function_name            = aws_lambda_function.stats_api.function_name
-  principal                = "*"
-  invoked_via_function_url = true
-}
+# Note: a second permission (lambda:InvokeFunction via function URL) was added once
+# by hand with the AWS CLI, because the installed provider doesn't support it yet:
+#   aws lambda add-permission --function-name tanvir-portfolio-match-engine \
+#     --statement-id AllowPublicInvokeViaUrl --action lambda:InvokeFunction \
+#     --principal '*' --invoked-via-function-url --region ap-southeast-2
 
 # 3. AWS Amplify hosting
 resource "aws_amplify_app" "portfolio" {
