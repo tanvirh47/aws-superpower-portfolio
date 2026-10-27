@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tanvir Hasanat | Cloud, DevOps & Security Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .pitch-bg {
+      background: radial-gradient(circle at center, #0f2942 0%, #020617 100%);
+      border: 2px solid #1d4ed8;
+      box-shadow: 0 0 35px rgba(37, 99, 235, 0.25);
+    }
+    .player-node { transition: all 0.55s cubic-bezier(0.4, 0, 0.2, 1); }
+    .player-node:hover { transform: translate(-50%, -50%) scale(1.15); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white">
+
+  <!-- Sticky Top Navigation with Visible Hint -->
+  <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-blue-900/50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+      <a href="#" class="text-xl font-black tracking-tight text-white">
+        TANVIR<span class="text-blue-500">.DEVOPS</span>
+      </a>
+      <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-blue-400 transition">About Me</a>
+        <a href="#superpowers" class="hover:text-blue-400 transition">Tech Superpowers</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects & Wins</a>
+        <a href="#tactical-pitch" onclick="openPitch()" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-2 rounded-full shadow-lg shadow-blue-600/40 animate-pulse hover:animate-none transition">
+          <span>⚽</span>
+          <span>Tactical XI Mode</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero & About Me Section -->
+  <section id="about" class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+      <div class="lg:col-span-2 space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/80 border border-blue-700/50 text-blue-400 text-xs font-mono">
+          <span>🟢 LIVE ON AWS AMPLIFY (SYDNEY)</span>
+          <span>•</span>
+          <span id="liveAttendance">Stadium Attendance: Loading...</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Architecting Resilient <span class="text-blue-500">Cloud Systems</span> & Defending the Perimeter.
+        </h1>
+        <p class="text-slate-300 text-lg leading-relaxed">
+          Hi, I'm <strong class="text-white">Tanvir Hasanat</strong> — a Computer Science & Engineering graduate (AUST) specializing in <strong class="text-blue-400">DevOps, Cloud Infrastructure, Cybersecurity, and AI-Driven Backends</strong>. Whether I'm automating AWS deployments with Terraform and Docker, hunting vulnerabilities in CTFs, or analyzing football tactics, I build systems that perform under pressure.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#tactical-pitch" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-600/30 transition">
+            ⚽ Explore Interactive Tactical Board (Hint!)
+          </a>
+          <a href="https://github.com/" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-3 rounded-xl transition">
+            GitHub Repository
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Scouting Report Card -->
+      <div class="bg-slate-900/90 border border-blue-900/60 rounded-2xl p-6 space-y-4 shadow-xl">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+          <span class="text-xs font-mono uppercase tracking-widest text-blue-400">Manager Profile</span>
+          <span class="bg-blue-600/20 text-blue-400 text-xs font-bold px-2.5 py-1 rounded">Dhaka, BD</span>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex justify-between"><span>🎓 B.Sc. in CSE:</span> <strong class="text-white">AUST</strong></li>
+          <li class="flex justify-between"><span>🛡️ TryHackMe Rank:</span> <strong class="text-blue-400">Top 2% Globally</strong></li>
+          <li class="flex justify-between"><span>🏆 AUST National CTF:</span> <strong class="text-blue-400">1st Place Winner</strong></li>
+          <li class="flex justify-between"><span>🥇 Solvio AI Hackathon:</span> <strong class="text-blue-400">1st Place Winner</strong></li>
+          <li class="flex justify-between"><span>📄 IEEE COMPAS 2026:</span> <strong class="text-white">Published Author</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATIVE FEATURE: The Gaffer's Tactical Pitch -->
+  <section id="tactical-pitch" class="max-w-6xl mx-auto px-6 py-10">
+    <div class="bg-slate-900/90 border-2 border-blue-700/60 rounded-2xl p-6 sm:p-8 shadow-2xl">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-blue-400 font-bold mb-1">
+            <span>⚡ Interactive Feature • Click Any Position or Switch Formations</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white">The Gaffer's Tactical Board: My Tech Superpowers in a 4-3-3 Spine</h2>
+        </div>
+        <!-- Formation Switcher -->
+        <div class="flex flex-wrap gap-2 bg-slate-950 p-1.5 rounded-xl border border-blue-900/50">
+          <button onclick="setTactic('balanced')" id="btn-balanced" class="bg-blue-600 text-white text-xs font-semibold px-3 py-2 rounded-lg transition">⚽ 4-3-3 Balanced</button>
+          <button onclick="setTactic('security')" id="btn-security" class="text-slate-400 hover:text-white text-xs font-semibold px-3 py-2 rounded-lg transition">🛡️ Low Block (SecOps)</button>
+          <button onclick="setTactic('attack')" id="btn-attack" class="text-slate-400 hover:text-white text-xs font-semibold px-3 py-2 rounded-lg transition">🔥 High Press (Cloud & AI)</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        <!-- Football Pitch -->
+        <div class="lg:col-span-2 relative pitch-bg rounded-xl h-[420px] overflow-hidden select-none">
+          <div class="absolute inset-4 border border-blue-400/30 rounded pointer-events-none"></div>
+          <div class="absolute top-0 bottom-0 left-1/2 w-px bg-blue-400/30 pointer-events-none"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 border border-blue-400/30 rounded-full pointer-events-none"></div>
+          <div class="absolute top-1/4 bottom-1/4 left-4 w-20 border-r border-y border-blue-400/30 pointer-events-none"></div>
+          <div class="absolute top-1/4 bottom-1/4 right-4 w-20 border-l border-y border-blue-400/30 pointer-events-none"></div>
+          <div id="pitchNodes"></div>
+        </div>
+
+        <!-- Selected Player Card -->
+        <div class="bg-slate-950 border border-blue-800/60 rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center border-b border-slate-800 pb-3 mb-4">
+              <span id="cardPos" class="bg-blue-600/20 text-blue-400 border border-blue-500/40 font-mono text-xs px-2.5 py-1 rounded">GK // #01</span>
+              <span id="cardRating" class="text-xl font-black text-blue-400">96 OVR</span>
+            </div>
+            <h3 id="cardTitle" class="text-xl font-bold text-white mb-1">Cybersecurity & SOC Defense</h3>
+            <p id="cardRole" class="text-xs text-blue-400 font-medium mb-4">Role: Sweeper Keeper (Last Line of Defense)</p>
+            <p id="cardDesc" class="text-sm text-slate-300 leading-relaxed mb-4"></p>
+            <div id="cardTags" class="flex flex-wrap gap-1.5 mb-5"></div>
+          </div>
+
+          <div class="space-y-3">
+            <div class="bg-blue-950/30 border border-blue-900/40 rounded-lg p-3 text-xs text-slate-300">
+              <strong class="text-blue-400">⚽ Gaffer's Note:</strong> <span id="cardQuote"></span>
+            </div>
+            <button onclick="voteMOTM()" id="voteBtn" class="w-full bg-blue-600/20 hover:bg-blue-600 hover:text-white text-blue-400 border border-blue-500/40 text-xs font-bold py-2.5 rounded-lg transition">
+              ⭐ Vote This Superpower "Man of the Match" (AWS Lambda)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Section 2: Tech Superpowers Grid -->
+  <section id="superpowers" class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-white mb-2">Tech Superpowers & Engineering Stack</h2>
+    <p class="text-slate-400 text-sm mb-8">Full breakdown of my core competencies across Cloud, Security, and Backend Engineering.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-slate-900/70 border border-slate-800 hover:border-blue-600/50 rounded-2xl p-6 transition">
+        <h3 class="text-lg font-bold text-blue-400 mb-3">☁️ Cloud & DevOps</h3>
+        <p class="text-sm text-slate-300 mb-4">Automated infrastructure provisioning, container orchestration, and resilient CI/CD pipelines.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">AWS (Amplify, EC2, Lambda, ALB, S3)</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Terraform</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Docker</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Ansible</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Linux & Bash</span>
+        </div>
+      </div>
+      <div class="bg-slate-900/70 border border-slate-800 hover:border-blue-600/50 rounded-2xl p-6 transition">
+        <h3 class="text-lg font-bold text-blue-400 mb-3">🛡️ Cybersecurity & SecOps</h3>
+        <p class="text-sm text-slate-300 mb-4">Offensive vulnerability assessment and defensive SOC monitoring across networks and web apps.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">TryHackMe Top 2%</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Fortinet NSE 1-3</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">SOC Level 1</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Python Security Scripting</span>
+        </div>
+      </div>
+      <div class="bg-slate-900/70 border border-slate-800 hover:border-blue-600/50 rounded-2xl p-6 transition">
+        <h3 class="text-lg font-bold text-blue-400 mb-3">⚙️ Backend, Data & AI</h3>
+        <p class="text-sm text-slate-300 mb-4">Scalable APIs, relational & distributed databases, and multi-modal deep learning pipelines.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Python & Node.js</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">C# & ASP.NET</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">PostgreSQL & SQL Server</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">PyTorch & Transformers</span>
+          <span class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800">Apache Spark</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Section 3: Projects & Achievements -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-12 border-t border-slate-900">
+    <h2 class="text-2xl font-bold text-white mb-2">Featured Projects & Hackathon Wins</h2>
+    <p class="text-slate-400 text-sm mb-8">Production cloud apps, winning hackathon builds, and peer-reviewed AI research.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-blue-400">AWS Serverless • Node.js • Express</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">PayNudge — AI Payment Recovery Platform</h3>
+          <p class="text-sm text-slate-300 mb-4">Engineered a cloud-native payment recovery planner deployed on AWS Lambda with a custom dashboard supporting intelligent multi-channel messaging workflows.</p>
+        </div>
+        <div class="text-xs text-slate-400 font-mono">Architecture: AWS Lambda + API Gateway + Node.js</div>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-blue-400">🥇 1st Place Winner — Solvio AI Hackathon</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">FlowMate — Automated SME Backend & Bot</h3>
+          <p class="text-sm text-slate-300 mb-4">Architected a secure Python backend and Telegram automation bot for small-and-medium enterprise inventory tracking and business logic.</p>
+        </div>
+        <div class="text-xs text-slate-400 font-mono">Stack: Python + Telegram API + Secure RBAC</div>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-blue-400">📄 IEEE COMPAS 2026 & B.Sc. Thesis</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">Medical Image Error Detection & Behavioral Biometrics</h3>
+          <p class="text-sm text-slate-300 mb-4">Accepted paper at IEEE COMPAS 2026 (University of Dhaka) on medical image error detection, alongside a multi-modal Vision/Audio Transformer framework (Swin, ViT, WavLM, HuBERT).</p>
+        </div>
+        <div class="text-xs text-slate-400 font-mono">Stack: PyTorch + Hugging Face + Vision/Audio Transformers</div>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-blue-400">Big Data & NASA Space Apps Challenge</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">MediMatch Bangladesh & Urban Microclimate Simulator</h3>
+          <p class="text-sm text-slate-300 mb-4">Built MediMatch using Apache Spark, PySpark, and GraphX to find cost-effective pharmaceutical alternatives, and designed backend pipelines ingesting NASA satellite datasets.</p>
+        </div>
+        <div class="text-xs text-slate-400 font-mono">Stack: Apache Spark + GraphX + Python</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-500">
+    Built by Tanvir Hasanat for the AWS Student Builder Challenge • Provisioned via Terraform on AWS (ap-southeast-2)
+  </footer>
+
+  <script>
+    // Replace with your Terraform output lambda_function_url after applying!
+    const LAMBDA_URL = "";
+
+    const players = {
+      gk: {
+        id: 'gk', num: '01', pos: 'GK', title: 'Cybersecurity & SecOps', rating: '96 OVR',
+        role: 'Sweeper Keeper (Perimeter Defense)',
+        desc: 'Ranked Top 2% globally on TryHackMe & 1st Place Winner at the AUST National CTF. Certified in Fortinet NSE 1–3 with hands-on SOC monitoring and web vulnerability assessment.',
+        tags: ['TryHackMe Top 2%', '1st Place CTF', 'SOC Level 1', 'Fortinet NSE 1-3'],
+        quote: '"A clean sheet in production is just as satisfying as a 90th-minute winner."',
+        coords: { balanced: [12, 50], security: [10, 50], attack: [18, 50] }
+      },
+      cb: {
+        id: 'cb', num: '04', pos: 'CB', title: 'AWS Cloud & DevOps Engine', rating: '95 OVR',
+        role: 'Ball-Playing Center Back (Infrastructure Spine)',
+        desc: 'Provisions resilient cloud architectures on AWS (Amplify, EC2, ALB, CloudFront, Route 53, Lambda) automated with Terraform, Docker, Ansible, and Vagrant.',
+        tags: ['AWS Sydney', 'Terraform', 'Docker', 'Ansible', 'Linux/Bash'],
+        quote: '"Every great tactical system starts by building out calmly from the back."',
+        coords: { balanced: [32, 28], security: [22, 30], attack: [44, 28] }
+      },
+      cm: {
+        id: 'cm', num: '08', pos: 'CM', title: 'Backend & Distributed Data', rating: '94 OVR',
+        role: 'Deep-Lying Playmaker (API & Data Orchestrator)',
+        desc: 'Controls the tempo of data flow with high-throughput backends in Python, Node.js, C#, ASP.NET, PostgreSQL, and Apache Spark (PayNudge, FoodFun, MediMatch).',
+        tags: ['Python', 'Node.js', 'C# / ASP.NET', 'PostgreSQL', 'Apache Spark'],
+        quote: '"Control the midfield (APIs and databases), and you control the match."',
+        coords: { balanced: [52, 68], security: [36, 65], attack: [64, 66] }
+      },
+      rw: {
+        id: 'rw', num: '07', pos: 'RW', title: 'AI & Transformer Research', rating: '95 OVR',
+        role: 'Inverted Winger (Deep Learning Specialist)',
+        desc: 'Accepted author at IEEE COMPAS 2026 & B.Sc. Thesis researcher utilizing Swin, ViT, DeiT, WavLM, and HuBERT transformers for clinical and biometric intelligence.',
+        tags: ['PyTorch', 'Hugging Face', 'IEEE COMPAS 2026', 'Vision/Audio Transformers'],
+        quote: '"Spatial awareness on the pitch and self-attention in Transformers go hand in hand."',
+        coords: { balanced: [74, 24], security: [52, 24], attack: [84, 22] }
+      },
+      st: {
+        id: 'st', num: '09', pos: 'ST', title: 'Hackathon Finisher (FlowMate)', rating: '97 OVR',
+        role: 'Clinical Striker (Rapid Product Delivery)',
+        desc: '1st Place Winner at the Solvio AI Hackathon (FlowMate SME automation) & Backend Designer for NASA Space Apps Challenge. Clinical execution under tight deadlines.',
+        tags: ['1st Place Solvio AI', 'PayNudge AWS', 'NASA Space Apps', 'Rapid Prototyping'],
+        quote: '"When the clock is ticking down in a hackathon, you need clinical finishing."',
+        coords: { balanced: [86, 55], security: [62, 55], attack: [92, 52] }
+      }
+    };
+
+    let currentTactic = 'balanced';
+    let selectedPlayer = 'gk';
+
+    function renderPitch() {
+      const container = document.getElementById('pitchNodes');
+      container.innerHTML = '';
+      Object.values(players).forEach(p => {
+        const [left, top] = p.coords[currentTactic];
+        const isSelected = p.id === selectedPlayer;
+        const node = document.createElement('button');
+        node.className = 'player-node absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center focus:outline-none';
+        node.style.left = left + '%';
+        node.style.top = top + '%';
+        node.onclick = () => selectPlayer(p.id);
+        node.innerHTML = `
+          <div class="w-11 h-11 rounded-full flex items-center justify-center font-bold text-xs border-2 transition ${
+            isSelected
+              ? 'bg-blue-500 text-white border-white shadow-[0_0_20px_rgba(59,130,246,0.95)] scale-110'
+              : 'bg-slate-900 text-blue-400 border-blue-500 hover:bg-blue-950'
+          }">${p.pos}</div>
+          <span class="mt-1 px-2 py-0.5 rounded bg-slate-950/90 border border-blue-900/60 text-[11px] font-medium text-slate-200 whitespace-nowrap">
+            #${p.num} ${p.title.split(' ')[0]}
+          </span>
+        `;
+        container.appendChild(node);
+      });
+    }
+
+    function selectPlayer(id) {
+      selectedPlayer = id;
+      const p = players[id];
+      document.getElementById('cardPos').textContent = `${p.pos} // #${p.num}`;
+      document.getElementById('cardRating').textContent = p.rating;
+      document.getElementById('cardTitle').textContent = p.title;
+      document.getElementById('cardRole').textContent = `Role: ${p.role}`;
+      document.getElementById('cardDesc').textContent = p.desc;
+      document.getElementById('cardQuote').textContent = p.quote;
+      document.getElementById('voteBtn').textContent = `⭐ Vote #${p.num} ${p.pos} "Man of the Match"`;
+      document.getElementById('cardTags').innerHTML = p.tags.map(t =>
+        `<span class="bg-blue-950/60 text-blue-300 border border-blue-800/50 text-xs px-2 py-0.5 rounded">${t}</span>`
+      ).join('');
+      renderPitch();
+    }
+
+    function setTactic(tactic) {
+      currentTactic = tactic;
+      ['balanced', 'security', 'attack'].forEach(t => {
+        const btn = document.getElementById('btn-' + t);
+        btn.className = t === tactic
+          ? 'bg-blue-600 text-white text-xs font-semibold px-3 py-2 rounded-lg transition'
+          : 'text-slate-400 hover:text-white text-xs font-semibold px-3 py-2 rounded-lg transition';
+      });
+      renderPitch();
+    }
+
+    async function voteMOTM() {
+      const btn = document.getElementById('voteBtn');
+      btn.textContent = '⚽ Goal Recorded! Vote Counted for #' + players[selectedPlayer].num;
+      if (LAMBDA_URL) {
+        try {
+          await fetch(LAMBDA_URL, { method: 'POST', body: JSON.stringify({ player: selectedPlayer }) });
+        } catch (e) {}
+      }
+    }
+
+    async function loadAttendance() {
+      const el = document.getElementById('liveAttendance');
+      if (!LAMBDA_URL) {
+        el.textContent = 'Stadium Attendance: 142 Scouts Watching';
+        return;
+      }
+      try {
+        const res = await fetch(LAMBDA_URL);
+        const data = await res.json();
+        el.textContent = `Stadium Attendance: ${data.attendance} Scouts Watching`;
+      } catch (e) {
+        el.textContent = 'Stadium Attendance: 142 Scouts Watching';
+      }
+    }
+
+    selectPlayer('gk');
+    loadAttendance();
+  </script>
+</body>
+</html>
